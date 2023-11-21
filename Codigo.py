@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class ConstrutorDeCarro(ABC):
+class ConstrutorCarro(ABC):
     def construir_carro(self):
         self.construir_chassi()
         self.instalar_motor()
@@ -17,7 +17,7 @@ class ConstrutorDeCarro(ABC):
     def pintar_carro(self):
         print("Pintando o carro com a cor padrão.")
 
-class ConstrutorDeCarroEsportivo(ConstrutorDeCarro):
+class ConstrutorCarroEsportivo(ConstrutorCarro):
     def construir_chassi(self):
         print("Construindo o chassi de um carro esportivo.")
 
@@ -27,7 +27,7 @@ class ConstrutorDeCarroEsportivo(ConstrutorDeCarro):
     def pintar_carro(self):
         print("Pintando o carro esportivo de preto fosco.")
 
-class ConstrutorDeCarroLuxo(ConstrutorDeCarro):
+class ConstrutorCarroLuxo(ConstrutorCarro):
     def construir_chassi(self):
         print("Construindo o chassi de um carro de luxo.")
 
@@ -35,10 +35,10 @@ class ConstrutorDeCarroLuxo(ConstrutorDeCarro):
         print("Instalando um motor potente para um carro de luxo.")
 
 if __name__ == "__main__":
-    construtor_esportivo = ConstrutorDeCarroEsportivo()
+    construtor_esportivo = ConstrutorCarroEsportivo()
     construtor_esportivo.construir_carro()
 
     print("\n")
 
-    construtor_luxo = ConstrutorDeCarroLuxo()
+    construtor_luxo = ConstrutorCarroLuxo()
     construtor_luxo.construir_carro()
